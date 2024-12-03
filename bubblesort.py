@@ -35,3 +35,8 @@ def bubble_sort(Array):
             i+=1
     return Array
 
+start = time.time()   
+print("Sorted Array : ",  bubble_sort([100,25,1,10]))
+end = time.time()
+Time = (end - start) * 10 ** 3
+print(f' Execution Time for bubble sort : {Time} ms')
