@@ -18,30 +18,23 @@ Created on Wed Nov 20 11:40:11 2024
         
 """
 
-def swap_insertion_elems(Array, i):
-    temp = Array [i]
-    print("temp : " ,temp)
-    while i >= 0:
-        if Array[i-1] > Array[i]:
-            Array[i] = Array[i-1]
-        else:
-            Array[i-1] = temp
-        i-=1
-    return Array
+
     
-    
-def insertion_sort():
-    Array = [6,1,7,4,2,9,8,5,3]
-    for i in range(1, len(Array)):
-        print("i : " , i )
-        if Array[i] < Array [i - 1]:
-            swap_insertion_elems(Array, i)
-    return Array        
+def insertion_sort(Array):
+    for step in range(1, len(Array)):
+        key = Array[step]
+        j = step - 1
+        while j >= 0 and key < Array[j]:
+            Array[j+1] = Array[j]
+            j = j - 1
+            Array[j+1] = key   
             
             
             
 start = time.time()
-print("Sorted Array : ",  insertion_sort())
+Array = [6,1,7,4,2,9,8,5,3]
+insertion_sort(Array)
+print("Sorted Array : ", Array)
 end = time.time()
 Time = (end - start) * 10 ** 3
 print(f' Execution Time for insertion sort : {Time} ms')
