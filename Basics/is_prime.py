@@ -7,3 +7,15 @@ def isPrime(self, n: int) -> bool:
                 return False
             return True
         return False
+def is_prime1(Num):
+        if Num <= 1:
+                return False
+        else:
+                is_prime = True
+                for i in range(2, Num):
+                        if (Num % i) == 0:
+                                is_prime = False
+                                break
+                return is_prime
+                
+                
