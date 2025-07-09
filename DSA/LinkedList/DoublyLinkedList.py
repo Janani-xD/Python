@@ -24,5 +24,10 @@ class DoublyNode:
         return head,new_node
 
 head = tail = DoublyNode(1)
+# print("27", head.val)
+# print("28", head.next)
+# print("29", tail.val)
+# print("30", tail.next)
 head1, tail1 = DoublyNode.insert_at_beginning(head,head=head, tail=tail, val = 3)
-print(head.display(head))
+head1.next = tail1
+print(head.display(head1))
