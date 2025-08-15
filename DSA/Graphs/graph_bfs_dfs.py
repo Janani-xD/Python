@@ -101,3 +101,12 @@ tree = {
 obj2 = Graph_Using_List()
 obj2.graph_bfs(tree,'A')
 
+
+
+                                      [1,2,3]
+                                    /         \
+# choosing 1                  []                 [1]     left branch doesn't  choose 1| Right branch chooses 1
+                           /    \               /    \
+# choosing 2             []     [2]         [1]       [1,2]  left branch doesn't choose 2| Right branch chooses 2
+                    /   \    /   \           /  \      /   \
+# choosing 3     []    [3] [2] [2,3]      [1]  [1,3] [1,2]  [1,2,3] left branch doesn't choose 3| Right branch chooses 3
