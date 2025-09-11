@@ -1,5 +1,8 @@
 # Liskov Substitution Principle
-from curses.textpad import rectangle
+# This principle implies that the subclass should be able to replace the parent or superclass when ever it is needed
+
+# in the below example square inherits rectangle, We are able to pass the rectangle into square to print the area
+# functionality
 
 
 class Rectangle:

@@ -1,5 +1,7 @@
 # Interface Segregation Principle
-
+# ISP states that the user should not have to use an interface , ie not using an interface  if they do not want to
+# Both car and Boat inherit vehicle and they extend the start_engine and stop engine , hence giving us control of
+# what we want in our appplication
 from abc import ABC, abstractmethod
 
 class Vehicle(ABC):
@@ -25,7 +27,7 @@ class Boat(Vehicle):
     def stop_engine(self):
         print("Boat Engine Stopped")
 
-def test_vehicle(vehicle):
+def test_vehicle(vehicle):   # This function does not care about what object it it
     vehicle.start_engine()
     vehicle.stop_engine()
 

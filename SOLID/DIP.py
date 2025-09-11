@@ -1,8 +1,10 @@
 # Dependency Inversion principle
-from SOLID.SRP import order_manager
+# It allows us to change logic without having to replace the entire application
+# NOTE : A high level module should not depend on a low level module
+# Once the payment is initiate how the payment is processed should not impact the calling function
 
 
-class PaymentGateway:
+class PaymentGateway: # we may add any business logic here
     def process_payment(self, amount):
         print("Making payment on Stripe")
         pass
@@ -26,6 +28,7 @@ class Order:
         # perform order placement logic
         self.payment_gateway.process_payment(total)
 
+# high level module
 class OrderManager:
     def __init__(self, order):
         self.order = order
